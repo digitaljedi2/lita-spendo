@@ -20,7 +20,8 @@ Spendo relies on the aws-sdk gem so it requires an AWS account. The account requ
 * `accounts` (Array) - Array of hashes containing account information. Each hash should look like this:
 
 ``` ruby
-{
+config.handlers.spendo.base_image_url = 'http://www.myscaryclownimage.com/1/clown.png'
+config.handlers.spendo.accounts = [ {
   'nickname'              => 'foo',
   'aws_account_id'        => ENV['AWS_ACCOUNT_ID'],
   'aws_access_key_id'     => ENV['AWS_ACCESS_KEY_ID'],
@@ -28,7 +29,7 @@ Spendo relies on the aws-sdk gem so it requires an AWS account. The account requ
   'aws_region'            => 'us-east-1',
   'room'                  => 'shell', # or room JID or whatever
   'dynamodb_table'        => 'BillingHistory'
-}
+} ]
 ```
 
 ### Optional attributes
